@@ -16,6 +16,8 @@ class Assets {
 
   static const String imagesLogo2 = "assets/images/logo2.svg";
 
+  static const String imagesLogoMain = "assets/images/logoMain.svg";
+
   static const String imagesLogout = "assets/images/logout.svg";
 
   static const String imagesMyInvestement = "assets/images/my_investement.svg";

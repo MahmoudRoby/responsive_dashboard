@@ -9,10 +9,13 @@ class DashboardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveLayout(
-      mobileLayout: (context) =>  const SizedBox(height: 100,),
-      tabletLayout: (context) => const SizedBox(height: 100,),
-      desktopLayout: (context) =>  DesktopLayout(context),
+    return Scaffold(
+      backgroundColor: const Color(0xffE5E5E5),
+      body: AdaptiveLayout(
+        mobileLayout: (context) =>  const SizedBox(height: 100,),
+        tabletLayout: (context) => const SizedBox(height: 100,),
+        desktopLayout: (context) =>  DesktopLayout(context),
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/drawer_tiem_model.dart';
+import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
 import 'package:responsive_dashboard/widgets/drawer_item.dart';
 import 'package:responsive_dashboard/widgets/inactive_drawer_item.dart';
@@ -29,9 +30,13 @@ class _CustomDrawerState extends State<CustomDrawer> {
         slivers: [
           const SliverToBoxAdapter(
             child: UserInfoListTile(
-              image: Assets.imagesLogoMain,
-              title: 'Lekan Okeowo',
-              subtitle: 'demo@gmail.com',
+              userInfoModel: UserInfoModel(
+                  image: Assets.imagesLogoMain,
+                  title: 'Lekan Okeowo',
+                  subtitle: 'demo@gmail.com'),
+              // image: Assets.imagesLogoMain,
+              // title: 'Lekan Okeowo',
+              // subtitle: 'demo@gmail.com',
             ),
           ),
           const SliverToBoxAdapter(
@@ -66,7 +71,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
             hasScrollBody: false,
             child: Column(
               children: [
-                const Expanded(child: SizedBox(height: 20,)),
+                const Expanded(
+                    child: SizedBox(
+                  height: 20,
+                )),
                 InactiveDrawerItem(
                   itemModel: DrawerItemModel(
                       title: 'Setting system', image: Assets.imagesSettings),

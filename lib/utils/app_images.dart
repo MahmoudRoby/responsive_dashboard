@@ -2,6 +2,8 @@
 class Assets {
   Assets._();
   
+  static const String imagesBackgroundCard = "assets/images/backgroundCard.png";
+
   static const String imagesBalance = "assets/images/balance.svg";
 
   static const String imagesCard = "assets/images/card.svg";
@@ -19,6 +21,8 @@ class Assets {
   static const String imagesLogoMain = "assets/images/logoMain.svg";
 
   static const String imagesLogout = "assets/images/logout.svg";
+
+  static const String imagesMaskgroup = "assets/images/Mask group.png";
 
   static const String imagesMyInvestement = "assets/images/my_investement.svg";
 

@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 
-
-import 'package:responsive_dashboard/widgets/all_expenses.dart';
+import 'package:responsive_dashboard/widgets/all_expenses_and_quick_invoice.dart';
 
 import 'package:responsive_dashboard/widgets/custom_drawer.dart';
-import 'package:responsive_dashboard/widgets/quick_invoice.dart';
-
-
-
+import 'package:responsive_dashboard/widgets/my_card_and_transaction_history.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout(BuildContext context, {super.key});
@@ -23,18 +19,18 @@ class DesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
+          flex: 3,
+          child: AllExpensesAndQuickImvoice(),
+        ),
+        SizedBox(
+          width: 32,
+        ),
+        Expanded(
           flex: 2,
-          child: Column(
-            children: [
-              AllExpenses(),
-              SizedBox(
-                height: 24,
-              ),
-              QuickInvoice()
-            ],
-          ),
-        )
+          child: MyCardAndTransactionAndIncomeSection(),
+        ),
       ],
     );
   }
 }
+

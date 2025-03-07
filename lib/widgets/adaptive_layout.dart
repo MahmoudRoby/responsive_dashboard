@@ -1,9 +1,6 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:responsive_dashboard/widgets/desktop_layout.dart';
-import 'package:responsive_dashboard/widgets/mobile_layout.dart';
-import 'package:responsive_dashboard/widgets/tablet_layout.dart';
 
 class AdaptiveLayout extends StatelessWidget {
   const AdaptiveLayout({
@@ -18,11 +15,11 @@ class AdaptiveLayout extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         if (constraints.maxWidth < 560) {
-          return MobileLayout(context);
+          return mobileLayout(context);
         } else if (constraints.maxWidth < 1200) {
-          return TabletLayout(context);
+          return tabletLayout(context);
         } else {
-          return DesktopLayout(context);
+          return desktopLayout(context);
         }
       },
     );

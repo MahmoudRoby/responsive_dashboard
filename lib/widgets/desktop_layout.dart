@@ -6,7 +6,7 @@ import 'package:responsive_dashboard/widgets/custom_drawer.dart';
 import 'package:responsive_dashboard/widgets/my_card_and_transaction_history.dart';
 
 class DesktopLayout extends StatelessWidget {
-  const DesktopLayout(BuildContext context, {super.key});
+  const DesktopLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,18 +19,31 @@ class DesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 3,
-          child: AllExpensesAndQuickImvoice(),
-        ),
-        SizedBox(
-          width: 32,
-        ),
-        Expanded(
-          flex: 2,
-          child: MyCardAndTransactionAndIncomeSection(),
-        ),
+          flex: 4,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 3,
+                      child: AllExpensesAndQuickImvoice(),
+                    ),
+                    SizedBox(
+                      width: 32,
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: MyCardAndTransactionAndIncomeSection(),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )
       ],
     );
   }
 }
-

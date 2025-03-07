@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/user_info_model.dart';
 import 'package:responsive_dashboard/utils/app_images.dart';
@@ -28,7 +27,6 @@ class LatestTransactionListView extends StatelessWidget {
         //width: 250,
         height: 80,
         child: Row(
-          
           children: userInfoItems
               .map(
                 (e) => IntrinsicWidth(

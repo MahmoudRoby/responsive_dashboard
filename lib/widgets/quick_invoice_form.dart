@@ -10,78 +10,77 @@ class QuickInvoiceForm extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-          
-          Row(
-            children: [
-              Expanded(
-                child: QuickInvoiceTextWidget(title: 'Customer name'),
+        Row(
+          children: [
+            Expanded(
+              child: QuickInvoiceTextWidget(title: 'Customer name'),
+            ),
+            SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: QuickInvoiceTextWidget(title: 'Customer Email '),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: CustomTextField(hintText: 'Type customer name'),
+            ),
+            Expanded(
+              child: CustomTextField(hintText: 'Type customer name'),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 6,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: QuickInvoiceTextWidget(title: 'Item name'),
+            ),
+            SizedBox(
+              width: 16,
+            ),
+            Expanded(
+              child: QuickInvoiceTextWidget(title: 'Item mount'),
+            ),
+          ],
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: CustomTextField(hintText: 'Type customer name'),
+            ),
+            Expanded(
+              child: CustomTextField(hintText: 'USD'),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 12,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: CustomButton(
+                text: 'Add more details',
+                backgroundColor: Color(0xffffffff),
               ),
-              SizedBox(
-                width: 16,
+            ),
+            SizedBox(
+              width: 24,
+            ),
+            Expanded(
+              child: CustomButton(
+                textColor: Color(0xffffffff),
+                text: 'Send Money',
               ),
-              Expanded(
-                child: QuickInvoiceTextWidget(title: 'Customer Email '),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: CustomTextField(hintText: 'Type customer name'),
-              ),
-              Expanded(
-                child: CustomTextField(hintText: 'Type customer name'),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 6,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: QuickInvoiceTextWidget(title: 'Item name'),
-              ),
-              SizedBox(
-                width: 16,
-              ),
-              Expanded(
-                child: QuickInvoiceTextWidget(title: 'Item mount'),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: CustomTextField(hintText: 'Type customer name'),
-              ),
-              Expanded(
-                child: CustomTextField(hintText: 'USD'),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 12,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child:  CustomButton(
-                  text: 'Add more details',
-                  backgroundColor: Color(0xffffffff),
-                ),
-              ),
-              SizedBox(
-                width: 24,
-              ),
-              Expanded(
-                child: CustomButton(
-                  textColor: Color(0xffffffff),
-                  text: 'Send Money',
-                ),
-              ),
-            ],
-          )
+            ),
+          ],
+        )
       ],
     );
   }

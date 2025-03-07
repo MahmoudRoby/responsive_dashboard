@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/transaction_history_model.dart';
 import 'package:responsive_dashboard/widgets/transaction_history_item.dart';
@@ -24,11 +23,21 @@ class TransactionHistoryList extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 3,
-      itemBuilder: (context, index) {
-        return TransactionHistoryItem(transactionHistoryModel: items[index]);
-      },
+    return Column(
+      children: items
+          .map(
+            (e) => TransactionHistoryItem(
+              transactionHistoryModel: e,
+            ),
+          )
+          .toList(),
     );
+    //  ListView.builder(
+
+    //   itemCount: 3,
+    //   itemBuilder: (context, index) {
+    //     return TransactionHistoryItem(transactionHistoryModel: items[index]);
+    //   },
+    // );
   }
 }

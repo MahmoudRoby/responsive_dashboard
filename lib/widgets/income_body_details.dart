@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/item_detail_model.dart';
 import 'package:responsive_dashboard/widgets/incom_body_item.dart';
@@ -16,10 +15,21 @@ class IncomBodyDetails extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 4,
-      itemBuilder: (context, index) {
-      return IncomBodyItem(itemDetailModel: items[index]);
-    });
+    return Column(
+      children: items
+          .map(
+            (e) => IncomBodyItem(
+              itemDetailModel: e,
+            ),
+          )
+          .toList(),
+    );
+
+    //    ListView.builder(
+    //     itemCount: 4,
+    //     itemBuilder: (context, index) {
+    //     return IncomBodyItem(itemDetailModel: items[index]);
+    //   }),
+    // );
   }
 }

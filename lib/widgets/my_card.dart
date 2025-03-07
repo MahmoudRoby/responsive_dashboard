@@ -18,33 +18,44 @@ class MyCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
         ),
-        child: Column(
-          children: [
-            ListTile(
-              title: Text(
-                'Name card',
-                style: AppStyle.styleRegular16.copyWith(color: Colors.white),
-              ),
-              subtitle: Text(
-                'Syah Bandi',
-                style: AppStyle.styleSemiBold20.copyWith(color: Colors.white),
-              ),
-            ),const Spacer(),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  '0918 8124 0042 8129',
-                  style: AppStyle.styleSemiBold24.copyWith(color: Colors.white),
-                ),
-                Text(
-                  '12/20 - 124',
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              ListTile(
+                title: Text(
+                  'Name card',
                   style: AppStyle.styleRegular16.copyWith(color: Colors.white),
-                )
-              ],
-            ),const SizedBox(height: 32,)
-          ],
+                ),
+                subtitle: Text(
+                  'Syah Bandi',
+                  style: AppStyle.styleSemiBold20.copyWith(color: Colors.white),
+                ),
+                
+              ),
+              const Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //  crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '0918 8124 0042 8129',
+                    style:
+                        AppStyle.styleSemiBold24.copyWith(color: Colors.white),
+                  ),
+                  Text(
+                    '12/20 - 124',
+                    style:
+                        AppStyle.styleRegular16.copyWith(color: Colors.white),
+                  )
+                ],
+              ),
+              const SizedBox(
+                height: 32,
+              )
+            ],
+          ),
         ),
       ),
     );

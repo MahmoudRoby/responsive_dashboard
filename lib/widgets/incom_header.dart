@@ -8,7 +8,7 @@ class IncomHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: ShapeDecoration(
         color: const Color(0xffffffff),
         shape: RoundedRectangleBorder(

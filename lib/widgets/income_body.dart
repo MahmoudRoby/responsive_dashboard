@@ -9,7 +9,7 @@ class IncomBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  const Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
           child: AspectRatio(
@@ -17,9 +17,7 @@ class IncomBody extends StatelessWidget {
             child:  IncomChart(),
           ),
         ),
-        Expanded(
-          child: IncomBodyDetails(),
-        ),
+        Expanded(child: IncomBodyDetails()),
       ],
     );
   }

@@ -23,17 +23,13 @@ class MyCardAndTransactionAndIncomeSection extends StatelessWidget {
         children: [
           MyCardSection(),
           Divider(
-            height: 20,
+            height: 40,
           ),
-          Expanded(
-            child: TransactionHistory(),
-          ),
+          TransactionHistory(),
           SizedBox(
             height: 24,
           ),
-          Expanded(
-            child: IncomSection(),
-          )
+          IncomSection()
         ],
       ),
     );

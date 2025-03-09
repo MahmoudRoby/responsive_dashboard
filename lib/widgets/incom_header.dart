@@ -17,9 +17,9 @@ class IncomHeader extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const Text(
+           Text(
             'Income',
-            style: AppStyle.styleSemiBold20,
+            style: AppStyle.styleSemiBold20(context),
           ),
           const Spacer(),
           Container(

@@ -21,7 +21,7 @@ class InactiveDrawerItem extends StatelessWidget {
         ),
         title: Text(
           itemModel.title,
-          style: AppStyle.styleRegular16,
+          style: AppStyle.styleRegular16(context),
         ),
       ),
     );

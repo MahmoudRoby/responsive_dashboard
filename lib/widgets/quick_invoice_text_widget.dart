@@ -9,7 +9,7 @@ class QuickInvoiceTextWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: AppStyle.styleMedium16,
+      style: AppStyle.styleMedium16(context),
     );
   }
 }

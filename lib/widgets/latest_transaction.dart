@@ -8,13 +8,14 @@ class LatestTransaction extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           'Latest Transaction',
-          style: AppStyle.styleMedium16,
+          style: AppStyle.styleMedium16(context),
         ),
+        // ignore: prefer_const_constructors
         LatestTransactionListView(),
       ],
     );

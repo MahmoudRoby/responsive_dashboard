@@ -23,7 +23,7 @@ class ActiveDrawerItem extends StatelessWidget {
         ),
         title: Text(
           itemModel.title,
-          style: AppStyle.styleBold16,
+          style: AppStyle.styleBold16(context),
         ),
         trailing: Container(
           width: 3.27,

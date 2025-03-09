@@ -16,15 +16,15 @@ class TransactionHistoryItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           transactionHistoryModel.title,
-          style: AppStyle.styleSemiBold16,
+          style: AppStyle.styleSemiBold16(context),
         ),
         subtitle: Text(
           transactionHistoryModel.subtitle,
-          style: AppStyle.styleRegular16,
+          style: AppStyle.styleRegular16(context),
         ),
         trailing: Text(
           transactionHistoryModel.amount,
-          style: AppStyle.styleSemiBold20.copyWith(
+          style: AppStyle.styleSemiBold20(context).copyWith(
               color: transactionHistoryModel.isDrawal
                   ? const Color(0xffF3735E)
                   : const Color(0xff7DD97B)),

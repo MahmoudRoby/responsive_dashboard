@@ -11,11 +11,11 @@ class RangOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Padding(
-          padding: EdgeInsets.all(12),
+         Padding(
+          padding: const EdgeInsets.all(12),
           child: Text(
             'Monthly',
-            style: AppStyle.styleRegular16,
+            style: AppStyle.styleRegular16(context),
           ),
         ),
         const SizedBox(

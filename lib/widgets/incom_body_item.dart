@@ -23,11 +23,11 @@ class IncomBodyItem extends StatelessWidget {
       // ),
       title:  Text(
         itemDetailModel.title,
-        style: AppStyle.styleRegular16,
+        style: AppStyle.styleRegular16(context),
       ),
       trailing:  Text(
         itemDetailModel.value,
-        style: AppStyle.styleMedium16,
+        style: AppStyle.styleMedium16(context),
       ),
     );
   }

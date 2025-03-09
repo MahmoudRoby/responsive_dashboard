@@ -19,7 +19,7 @@ class DesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 4,
+          flex: 5,
           child: CustomScrollView(
             slivers: [
               SliverFillRemaining(

@@ -21,9 +21,13 @@ class ActiveDrawerItem extends StatelessWidget {
         leading: SvgPicture.asset(
           itemModel.image,
         ),
-        title: Text(
-          itemModel.title,
-          style: AppStyle.styleBold16(context),
+        title: FittedBox(
+          alignment: AlignmentDirectional.centerStart,
+          fit: BoxFit.scaleDown,
+          child: Text(
+            itemModel.title,
+            style: AppStyle.styleBold16(context),
+          ),
         ),
         trailing: Container(
           width: 3.27,

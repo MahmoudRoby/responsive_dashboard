@@ -21,13 +21,18 @@ class IncomBodyItem extends StatelessWidget {
       //   backgroundColor: Color(0xff208CC8),
       //   radius: 6,
       // ),
-      title:  Text(
-        itemDetailModel.title,
-        style: AppStyle.styleRegular16(context),
+      title:  FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailModel.title,
+          style: AppStyle.styleRegular16(context),
+        ),
       ),
-      trailing:  Text(
-        itemDetailModel.value,
-        style: AppStyle.styleMedium16(context),
+      trailing:  FittedBox(fit: BoxFit.scaleDown,
+        child: Text(
+          itemDetailModel.value,
+          style: AppStyle.styleMedium16(context),
+        ),
       ),
     );
   }

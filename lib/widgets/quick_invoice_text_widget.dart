@@ -7,9 +7,11 @@ class QuickInvoiceTextWidget extends StatelessWidget {
   final String title;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: AppStyle.styleMedium16(context),
+    return FittedBox(fit: BoxFit.scaleDown,
+      child: Text(
+        title,
+        style: AppStyle.styleMedium16(context),
+      ),
     );
   }
 }

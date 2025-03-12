@@ -16,11 +16,11 @@ class IncomBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                flex: 2,
+                flex: 1,
                 child: IncomChart(),
               ),
               Expanded(
-                flex: 6,
+                flex: 3,
                 child: IncomBodyDetails(),
               ),
             ],

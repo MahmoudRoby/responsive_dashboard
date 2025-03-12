@@ -37,34 +37,36 @@ class _AllExpensesItemListViewState extends State<AllExpensesItemListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-            child: GestureDetector(
-                onTap: () {
-                  currentIndex = index;
-                  setState(() {
-                    
-                  });
-                },
-                child: AllExpensesItem(
-                  itemModel: item,
-                  isSelected: currentIndex==index,
-                )),
-          ),
-        );
-        // if (index == 1) {
-        //   return Expanded(child: Padding(
-        //     padding: const EdgeInsets.symmetric(horizontal: 12),
-        //     child: AllExpensesItem(itemModel: item),
-        //   ));
-        // } else {
-        //   return Expanded(child: AllExpensesItem(itemModel: item));
-        // }
-      }).toList(),
+      children: items
+          .asMap()
+          .entries
+          .map((e) {
+            int index = e.key;
+            var item = e.value;
+            return Expanded(
+              child: GestureDetector(
+                  onTap: () {
+                    currentIndex = index;
+                    setState(() {});
+                  },
+                  child: AllExpensesItem(
+                    itemModel: item,
+                    isSelected: currentIndex == index,
+                  )),
+            );
+            // if (index == 1) {
+            //   return Expanded(child: Padding(
+            //     padding: const EdgeInsets.symmetric(horizontal: 12),
+            //     child: AllExpensesItem(itemModel: item),
+            //   ));
+            // } else {
+            //   return Expanded(child: AllExpensesItem(itemModel: item));
+            // }
+          })
+          // اضافة فراغ او سايز بوكس
+          .expand((widget) => [widget, const SizedBox(width: 8)])
+          .toList()
+        ..removeLast(),
     );
 
     //Row(children:items.map((e)=>Expanded(child: AllExpensesItem(itemModel: e))).toList());
